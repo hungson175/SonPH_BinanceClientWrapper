@@ -1,8 +1,14 @@
 # SonPH_BinanceClientWrapper
-
 ## Description
 
 This project, `SonPH_BinanceClientWrapper`, is a Python package designed to provide a simplified and efficient way to interact with the Binance API, particularly focusing on futures trading. By abstracting the complexities of the Binance futures API, this wrapper allows developers and traders to focus more on strategy implementation and less on technical details.
+
+## Notes:
+The code works only for Hedge-Mode  
+
+```Go into Binance > Settings > Position Mode > Hedge Mode)```
+
+This mode support opening both Long and Short positions of the same asset at the same time 
 
 ## Features
 
