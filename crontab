@@ -1,0 +1,4 @@
+# Run bot_sample.py every 4 hours
+15 */1 * * * cd /app && /usr/local/bin/poetry run python bot_sample.py >> /var/log/cron.log 2>&1
+
+# An empty line at the end of the file is required

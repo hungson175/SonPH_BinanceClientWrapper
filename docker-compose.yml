@@ -1,0 +1,14 @@
+services:
+  my-trading-bot:
+    build: .
+    image: trading-bot
+    container_name: my-trading-bot
+    volumes:
+      - .:/app
+      - ~/.bashrc:/root/.bashrc
+      - ./crontab:/etc/cron.d/bot-cron
+    ports:
+      - "4000:8000"  # Map port 8000 of the container to port 4000 on your host
+#    entrypoint: /bin/bash # don't use this line or the CMD line inside Dockerfile will be ignored
+    tty: true  # Keeps the container running
+    restart: unless-stopped  # Optional: Ensures the container restarts if it stops unexpectedly
